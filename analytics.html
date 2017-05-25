@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script async src="https://cdn.ampproject.org/v0.js"></script>
-        <link rel="canonical" href="#">
+        <link rel="canonical" href="https://bookstein.github.io/amp/analytics.html">
         <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
         <style amp-custom>
             h1 {
@@ -19,6 +19,43 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <a href='#'>Go here</a>
+        <a href='#'>Go there</a>
+        <a href='#link-clicked'>Route change?</a>
+        <amp-img id="my-image" src="sjf.png" alt="SocialJusticeFund" height="270" width="214"></amp-img>
+        <h3>Here is an iframe!</h3>
+        <amp-analytics>
+        <script type="application/json">
+            {
+            "requests": {
+                "event": "https://amp-publisher-samples-staging.herokuapp.com/amp-analytics/ping?user=amp-ggrAawkEDM_pssgNQbPwMzuiTj9GpvqnlJmLHNMG5o-DJe7YsDwNn4aB9w8JWlAy&account=ampbyexample&event=${eventId}"
+            },
+            "triggers": {
+                "trackAnchorClicks": {
+                    "on": "click",
+                    "selector": "a",
+                    "request": "event",
+                    "vars": {
+                        "eventId": "clickOnAnyAnchor"
+                    }
+                },
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "event",
+                    "visibilitySpec": {
+                        "selector": "#my-image",
+                        "visiblePercentageMin": 20,
+                        "totalTimeMin": 500,
+                        "continuousTimeMin": 200
+                    },
+                    "vars": {
+                        "eventId": "imageLoad"
+                    }
+                }
+            }
+        }
+        </script>
+        </amp-analytics>
         <amp-iframe class="fixed-dashboard ampstart-card m1"
             width="180"
             height="180"
@@ -26,11 +63,11 @@
             sandbox="allow-scripts allow-same-origin"
             frameborder="0"
             src="https://amp-publisher-samples-staging.herokuapp.com/amp-analytics/embed?user=amp-ggrAawkEDM_pssgNQbPwMzuiTj9GpvqnlJmLHNMG5o-DJe7YsDwNn4aB9w8JWlAy&account=ampbyexample">
-            <amp-img src="/img/pixel-white.png"
+            <amp-img src="loading_spinner.gif"
                 layout="fixed-height"
                 height="350"
                 width="auto"
                 placeholder></amp-img>
-        </amp-iframe>
+            </amp-iframe>
     </body>
 </html>
