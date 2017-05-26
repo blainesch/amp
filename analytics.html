@@ -33,10 +33,7 @@
                     "selector": "a",
                     "request": "event",
                     "vars": {
-                        "eventId": "clickOnAnyAnchor",
-                        "countryCode": "tr",
-                        "canonicalUrl": "${canonicalUrl}",
-                        "ampdocUrl": "${ampdocUrl}"
+                        "eventId": "clickOnAnyAnchor"
                     }
                 },
                 "trackPageview": {
@@ -49,7 +46,8 @@
                         "continuousTimeMin": 200
                     },
                     "vars": {
-                        "eventId": "imageLoad",
+                        "eventId": "loadImage",
+                        "canonicalUrl": "${canonicalUrl}",
                         "ampdocUrl": "${ampdocUrl}"
                     }
                 }

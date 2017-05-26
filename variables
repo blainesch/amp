@@ -1,0 +1,70 @@
+AMP Document Host
+AMP Document Hostname
+AMP Document URL
+Canonical Host
+Canonical Hostname
+Canonical Path
+Canonical URL
+Counter
+Document Charset
+Document Referrer
+Source URL
+Source Host
+Source Hostname
+Source Path
+Title
+Viewer
+Content Load Time
+Domain Lookup Time
+DOM Interactive Time
+Navigation Redirect Count
+Navigation Timing
+Navigation Type
+Page Download Time
+Page Load Time
+Redirect Time
+Server Response Time
+TCP Connection Time
+Available Screen Height
+Available Screen Width
+Browser Language
+Screen Color Depth
+Screen Height
+Screen Width
+Scroll Height
+Scroll Width
+Scroll Left
+Scroll Top
+Timezone
+Viewport Height
+Viewport Width
+Horizontal Scroll Boundary
+Total Engaged Time
+Vertical Scroll Boundary
+Backgrounded
+Backgrounded At Start
+Carousel From Slide
+Carousel To Slide
+Element Height
+Element Width
+Element X
+Element Y
+First Seen Time
+First Visible Time
+Last Seen Time
+Last Visible Time
+Load Time Visibility
+Max Continuous Visible Time
+Max Visible Percentage
+Min Visible Percentage
+Total Time
+Total Visible Time
+AMP Version
+Background State
+Client ID
+Extra URL Parameters
+Page View ID
+Query Parameter
+Random
+Request Count
+Timestamp
