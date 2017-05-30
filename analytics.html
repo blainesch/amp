@@ -25,30 +25,30 @@
         <script type="application/json">
             {
             "requests": {
-                "event": "http://localhost:3000?user=amp-ggrAawkEDM_pssgNQbPwMzuiTj9GpvqnlJmLHNMG5o-DJe7YsDwNn4aB9w8JWlAy&account=ampbyexample&event=${eventId}&canonicalUrl=${canonicalUrl}&ampdocUrl=${ampdocUrl}"
+                "event": "http://localhost:3000?user=amp-ggrAawkEDM_pssgNQbPwMzuiTj9GpvqnlJmLHNMG5o-DJe7YsDwNn4aB9w8JWlAy&account=ampbyexample&key=${key}&event=${eventId}&canonicalUrl=${canonicalUrl}&targetUrl=${targetUrl}&timeToConnectStart=${timeToConnectStart}&timeToUnloadEventStart=${timeToUnloadEventStart}&session=${session}"
             },
             "triggers": {
                 "trackAnchorClicks": {
                     "on": "click",
                     "selector": "a",
-                    "request": "event",
-                    "vars": {
-                        "eventId": "clickOnAnyAnchor"
-                    }
+                    "request": "event"
                 },
                 "trackPageview": {
                     "on": "visible",
                     "request": "event",
+                    "vars": {
+                        "eventId": "pageview",
+                        "key": "abc",
+                        "session": "${clientId(nr-session)}",
+                        "targetUrl": "${ampdocUrl}",
+                        "timeToConnectStart": "${navTiming(navigationStart)}",
+                        "timeToUnloadEventStart": "${navTiming(unloadEventStart)}"
+                    },
                     "visibilitySpec": {
                         "selector": "#my-image",
                         "visiblePercentageMin": 20,
                         "totalTimeMin": 500,
                         "continuousTimeMin": 200
-                    },
-                    "vars": {
-                        "eventId": "loadImage",
-                        "canonicalUrl": "${canonicalUrl}",
-                        "ampdocUrl": "${ampdocUrl}"
                     }
                 }
             }
