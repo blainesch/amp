@@ -49,4 +49,4 @@ https://staging-insights.newrelic.com/accounts/550352/query?query=SELECT%20mobil
 ### Publish to GH-pages
 `git push origin master`
 
- ### Visit the deployed site at https://bookstein.github.io/amp/ !
+### Visit the deployed site at https://bookstein.github.io/amp/ !
