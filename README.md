@@ -47,6 +47,9 @@ https://staging-insights.newrelic.com/accounts/550352/query?query=SELECT%20mobil
  - Add `#development=1` to the end of the URL to get AMP validation
 
 ### Publish to GH-pages
-`git push origin master`
+```
+git remote add publish git@github.com:bookstein/amp.git
+git push publish master
+```
 
 ### Visit the deployed site at https://bookstein.github.io/amp/ !
